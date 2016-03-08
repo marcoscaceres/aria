@@ -391,7 +391,7 @@ var mappingTableLabels = {
       </section>
     <section id="include_elements">
 		  <h4>Including Elements in the Accessibility Tree</h4>
-        <p>If not already excluded from the accessibility tree per the rules above in <a href="#exclude_elements2">Excluding Elements in the Accessibility Tree</a>, <a class="termref">user agents</a> MUST provide an <a class="termref">accessible object</a> in the <a class="termref">accessibility tree</a> for <abbr title="Document Object Model">DOM</abbr> <a class="termref">elements</a> that meet any of the following criteria:</p>
+        <p>If not already excluded from the accessibility tree per the rules above in <a href="#exclude_elements2">Excluding Elements in the Accessibility Tree</a>, <a class="termref">user agents</a> MUST provide an <a class="termref">accessible object</a> in the <a class="termref">accessibility tree</a> for <abbr title="Document Object Model">DOM</abbr> <a class="termref">elements</a> that meet any of the following criteria.  In addition, even if the element would be excluded due to an explicit or implicit role of <a class="role-reference" href="#presentation">presentation</a> or <a class="role-reference" href="#none">none</a>, then user agents MUST ignore the presentation role, based on these criteria:</p>
         <ul>
           <li>Text elements</li>
           <li>Elements that may fire an accessibility <abbr title="Application Program Interface">API</abbr> <a class="termref">event</a></li>
