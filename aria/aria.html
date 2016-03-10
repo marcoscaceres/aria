@@ -524,6 +524,7 @@
 				<li><rref>menuitemcheckbox</rref></li>
 				<li><rref>menuitemradio</rref></li>
 				<li><rref>option</rref></li>
+				<li><rref>password</rref></li>
 				<li><rref>progressbar</rref></li>
 				<li><rref>radio</rref></li>
 				<li><rref>scrollbar</rref></li>
@@ -4537,6 +4538,82 @@
 					<tr>
 						<th class="implicit-values-head" scope="row">Implicit Value for Role:</th>
 						<td class="implicit-values">Default for <pref>aria-selected</pref> is <code class="default">false</code>.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="role" id="password">
+			<rdef>password</rdef>
+			<div class="role-description">
+				<p>[ARIA 1.1] An <rref>input</rref> for entering a password.</p>
+				<p>The <code>password</code> <a>role</a> makes it possible for <a>assistive technologies</a> to customize their behavior in order to not inadvertently expose private information. For instance, a screen reader which normally echoes key presses may instead remain silent or echo each displayed character as it is inserted. In order to facilitate the latter behavior, authors SHOULD set the <code>password</code> element's text to characters which obscure the real value and update that text each time a character is inserted or deleted by the user.</p>
+			</div>
+			<table class="role-features">
+				<caption>Characteristics:</caption>
+				<thead>
+					<tr>
+						<th scope="col">Characteristic</th>
+						<th scope="col">Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="role-abstract-head" scope="row">Is Abstract:</th>
+						<td class="role-abstract"> </td>
+					</tr>
+					<tr>
+						<th class="role-parent-head" scope="row">Superclass Role:</th>
+						<td class="role-parent"><rref>input</rref></td>
+					</tr>
+					<tr>
+						<th class="role-children-head" scope="row">Subclass Roles:</th>
+						<td class="role-children">Placeholder</td>
+					</tr>
+					<tr>
+						<th class="role-base-head" scope="row">Base Concept:</th>
+						<td class="role-base"><a href="http://www.w3.org/TR/html5/forms.html#password-state-(type=password)"><abbr title="Hypertext Markup Language">HTML</abbr> <code>input[type="password"]</code></a></td>
+					</tr>
+					<tr>
+						<th class="role-related-head" scope="row">Related Concepts:</th>
+						<td class="role-related"> </td>
+					</tr>
+					<tr>
+						<th class="role-required-properties-head">Required States and Properties:</th>
+						<td class="role-required-properties"> </td>
+					</tr>
+					<tr>
+						<th class="role-properties-head" scope="row">Supported States and Properties:</th>
+						<td class="role-properties">
+							<ul>
+								<li><pref>aria-placeholder</pref></li>
+								<li><pref>aria-readonly</pref></li>
+								<li><pref>aria-required</pref></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
+						<td class="role-inherited">Placeholder</td>
+					</tr>
+					<tr>
+						<th class="role-namefrom-head" scope="row">Name From:</th>
+						<td class="role-namefrom">author</td>
+					</tr>
+					<tr>
+						<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
+						<td class="role-namerequired">True</td>
+					</tr>
+					<tr>
+						<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
+						<td class="role-namerequired-inherited"> </td>
+					</tr>
+					<tr>
+						<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
+						<td class="role-childpresentational"> </td>
+					</tr>
+					<tr>
+						<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
+						<td class="role-presentational-inherited"> </td>
 					</tr>
 				</tbody>
 			</table>
