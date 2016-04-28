@@ -4609,13 +4609,13 @@
                 <p>There are a number ways for authors to override presentational roles.</p>
                 <p>Explicit roles on a descendant or <a>owned</a> element override the inherited role of <code>presentation</code>, and cause the owned element to behave as any other element with an explicit role. If the action of exposing the implicit role causes the accessibility tree to be malformed, the expected results are undefined and the user agent MAY resort to an internal recovery mechanism to repair the accessibility tree.</p>
                 <p>If an element with a role of presentation is focusable, or otherwise interactive, user agents MUST ignore the normal effect of the role and expose the element with implicit native semantics, in order to ensure that the element is both <a>understandable</a> and <a>operable</a>.</p>
-                <p>For any element with an explicit or inherited role of presentation, user agents MUST ignore any non-global, role-specific <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> states and properties. However, the user agent MUST always expose global <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> states and properties to accessibility <abbr title="Application Programing Interfaces">APIs</abbr>, even if an element has an explicit or inherited role of <code>presentation</code>.
-                </p>
+		<p>User agents MUST always expose global WAI-ARIA states and properties to accessibility APIs, even if an element has an explicit or inherited role of presentation. In this case, the user agent ignores the <code>presentation</code> role and exposes the element according to its implicit native semantics. However, user agents MUST ignore any non-global, role-specific WAI-ARIA states and properties, unless it is on an inherited presentational role where an explicit role is applied.
+		</p>
 		<p>For example,  <pref>aria-haspopup</pref> is a global attribute and would always be applied; <pref>aria-level</pref> is not a global attribute and would therefore only apply if the element was not in a presentational state.</p>
-		<pre class="example highlight"><span class="comment">&lt;!-- 1. [role="presentation"] negates the implicit 'heading' role semantics but does not affect the global hidden state. --&gt;</span>
+		<pre class="example highlight"><span class="comment">&lt;!-- 1. [role="presentation"] is ignored due to the global aria-haspopup property. --&gt;</span>
 &lt;h1 role="presentation" aria-haspopup="true"&gt; Sample Content &lt;/h1&gt;
 
-<span class="comment">&lt;!-- 1. [role="presentation"] negates the both the implicit 'heading' and the non-global level. --&gt;</span>
+<span class="comment">&lt;!-- 2. [role="presentation"] negates the both the implicit 'heading' and the non-global level. --&gt;</span>
 &lt;h1 role="presentation" aria-level="2"&gt; Sample Content &lt;/h1&gt;</pre>
 			</div>
 			<table class="role-features">
