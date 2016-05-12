@@ -4605,7 +4605,8 @@
   &lt;/li&gt;
   …
 &lt;/ul&gt;</pre>
-		<p id="conflict_resolution_presentation_none"><strong>Presentational Roles Conflict Reslolution</strong></p>
+		<section id="conflict_resolution_presentation_none">
+		<p><strong>Presentational Roles Conflict Reslolution</strong></p>
                 <p>There are a number ways presentational role conflicts are resolved.</p>
 		<p>Host languages elements, having implicit presentational roles for which no roles, may be applied, MUST never be exposed to in the accessibility tree. With this exception, user agents MUST always expose global WAI-ARIA states and properties to accessibility APIs. In this case, the user agent ignores the <code>presentation</code> role and exposes the element according to its implicit native semantics. However, user agents MUST ignore any non-global, role-specific WAI-ARIA states and properties, unless it is on an inherited presentational role where an explicit role is applied.
                 </p>
@@ -4620,6 +4621,7 @@ evel</pref> is not a global attribute and would therefore only apply if the elem
                 <p>If an element with a role of presentation is focusable, or otherwise interactive, user agents MUST ignore the normal effect of the role and expose the element with implicit native semantics, in order to ensure that the element is both <a>understandable</a> and <a>operable</a>.</p>
 		<p>User agents MUST always expose global WAI-ARIA states and properties to accessibility APIs, even if an element has an explicit or inherited role of presentation. In this case, the user agent ignores the <code>presentation</code> role and exposes the element according to its implicit native semantics. However, user agents MUST ignore any non-global, role-specific WAI-ARIA states and properties, unless it is on an inherited presentational role where an explicit role is applied.
 		</p>
+		</section>
 			</div>
 			<table class="role-features">
 				<caption>Characteristics:</caption>
